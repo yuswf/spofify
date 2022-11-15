@@ -1,0 +1,147 @@
+$bg-color: #1d2025;
+$text-color: #E4E5E7;
+$x: #EFC7A3;
+$y: #02DAC5;
+$button-border: #373A3F;
+$color-text: #010000;
+$comp-bg-color: #1F2933;
+$comp-bg-color-1: #333C45;
+$icon-color: #EDC298;
+$input-border: #EDC298;
+$button-bg-color: #353432;
+$input-bg: #3A434C;
+$input-border-2: #ECC29A;
+$button-border-color: #303338;
+$button-text: #E1C2A6;
+$ds-color: #121212;
+$badge-color: #14100F;
+$spotify-color: #1ED760;
+
+html, body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.main {
+  & .key-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & input {
+      background-color: $input-bg;
+      border: none;
+      width: 350px;
+      height: 50px;
+
+      &:focus {
+        outline: 0.1px solid $input-border-2;
+        box-shadow: none;
+      }
+    }
+  }
+
+  & .welcomeScreen {
+    width: 700px !important;
+    text-align: center;
+    margin: 30px auto auto auto;
+    position: relative;
+
+    & .playerCard {
+      background-color: #181a1e;
+      border: 1px solid $input-border;
+    }
+
+    & .listOfSongs {
+      height: 300px;
+      overflow: scroll;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: $input-border;
+      }
+    }
+
+    & .songSearchInput {
+      height: 45px !important;
+      background-color: $input-bg;
+      border: 1px solid $input-border;
+      width: 370px;
+      margin: 15px 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  & .navbar {
+    position: relative;
+    margin: auto;
+    width: 700px !important;
+
+    & .second-nav {
+      border: 1px solid $input-border;
+      background-color: #181a1e;
+      border-radius: 200px;
+
+      & .navbar-els {
+        margin: auto;
+
+        & li {
+          color: $text-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  & .loader {
+    position: absolute;
+    top: 50%;
+    color: $input-border-2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotation 2s infinite linear;
+  }
+
+  & .welcomeSection {
+    margin-left: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & .signInButton {
+      padding: 15px;
+      border: 1px solid $input-border-2;
+      border-radius: 10px;
+      background-color: $input-bg;
+      display: flex;
+      align-items: center;
+
+      & .spotify {
+        color: #1ED760;
+      }
+    }
+  }
+}
+

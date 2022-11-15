@@ -1,0 +1,108 @@
+html, body {
+  background-color: #1d2025;
+  color: #E4E5E7;
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.main .key-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .key-input input {
+  background-color: #3A434C;
+  border: none;
+  width: 350px;
+  height: 50px;
+}
+.main .key-input input:focus {
+  outline: 0.1px solid #ECC29A;
+  box-shadow: none;
+}
+.main .welcomeScreen {
+  width: 700px !important;
+  text-align: center;
+  margin: 30px auto auto auto;
+  position: relative;
+}
+.main .welcomeScreen .playerCard {
+  background-color: #181a1e;
+  border: 1px solid #EDC298;
+}
+.main .welcomeScreen .listOfSongs {
+  height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.main .welcomeScreen .listOfSongs::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+.main .welcomeScreen .listOfSongs::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #EDC298;
+}
+.main .welcomeScreen .songSearchInput {
+  height: 45px !important;
+  background-color: #3A434C;
+  border: 1px solid #EDC298;
+  width: 370px;
+  margin: 15px 5px;
+}
+.main .welcomeScreen .songSearchInput:focus {
+  outline: none;
+}
+.main .navbar {
+  position: relative;
+  margin: auto;
+  width: 700px !important;
+}
+.main .navbar .second-nav {
+  border: 1px solid #EDC298;
+  background-color: #181a1e;
+  border-radius: 200px;
+}
+.main .navbar .second-nav .navbar-els {
+  margin: auto;
+}
+.main .navbar .second-nav .navbar-els li {
+  color: #E4E5E7;
+  font-weight: bold;
+}
+.main .loader {
+  position: absolute;
+  top: 50%;
+  color: #ECC29A;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotation 2s infinite linear;
+}
+.main .welcomeSection {
+  margin-left: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .welcomeSection .signInButton {
+  padding: 15px;
+  border: 1px solid #ECC29A;
+  border-radius: 10px;
+  background-color: #3A434C;
+  display: flex;
+  align-items: center;
+}
+.main .welcomeSection .signInButton .spotify {
+  color: #1ED760;
+}
+
+/*# sourceMappingURL=style.css.map */
