@@ -26,7 +26,7 @@ const nextConfig = {
         authorizeUrl: 'https://accounts.spotify.com/authorize',
         clientId: 'f319d999cc804ac196a985d24a621404',
         clientSecret: '9324168b688d4a96a7a00d706e6888dd',
-        callbackUrl: 'http://localhost/api/callback'
+        callbackUrl: 'https://spofify.vercel.app/api/callback'
     }
 }
 
