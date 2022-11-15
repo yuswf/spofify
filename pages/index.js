@@ -103,7 +103,7 @@ function Main() {
             document.getElementById('code').disabled = false;
             setCode('');
 
-            return toast.error(<b>Don't match code.</b>);
+            return toast.error(<b>Don&apos;t match code.</b>);
         }
 
         if (Check(code)) {

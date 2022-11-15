@@ -1,6 +1,8 @@
 /** @type {{reactStrictMode: boolean, domains: string[], env: {codes: string[], authorizeUrl: string, clientId: string, apiUrl: string, clientSecret: string, callbackUrl: string}}} */
 const nextConfig = {
-    domains: ['sdk.scdn.co'],
+    images: {
+        domains: ['sdk.scdn.co', 'i.scdn.co']
+    },
     reactStrictMode: true,
     env: {
         codes: [

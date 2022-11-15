@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {useRouter} from 'next/router';
 import IconComponent from './Icon.component';
 import getCurrentlyPlaying from '../utils/getCurrentlyPlaying';
-
+import Image from 'next/image';
 import Script from 'next/script';
 import getLikedTracks from '../utils/getLikedTracks';
 import ChangeTrack from '../utils/changeTrack';
@@ -109,7 +109,7 @@ function WelcomeScreenComponent() {
 
         <p>Please connect the <b>Spofify</b> on <b style={{color: '#1ED760'}}>Spotify</b>.</p>
 
-        <img src="/spofify.png" className="align-center mt-7 ml-auto mr-auto" alt=""/>
+        <Image src="/spofify.png" height="305" width="388" className="align-center mt-7 ml-auto mr-auto" alt=""/>
     </div>
 
     function changeVolume(e) {
@@ -169,13 +169,13 @@ function WelcomeScreenComponent() {
                     <div className="flex flex-col items-center pb-10">
                         <br/>
                         <br/>
-                        <img className="now-playing__cover w-24 h-24 mb-3 rounded-full shadow-lg"
+                        <Image width={64} height={64} className="now-playing__cover w-24 h-24 mb-3 rounded-full shadow-lg"
                              src={current_track.album.images[0].url} alt="song name"/>
                         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white"><a
-                            className="hover:underline" target="_blank"
+                            className="hover:underline"
                             href={"https://open.spotify.com/track/" + current_track.id}>{current_track.name}</a></h5>
                         <span className="text-sm text-gray-500 dark:text-gray-400">{
-                            current_track.artists.map((artist, i) => <a key={i} target="_blank"
+                            current_track.artists.map((artist, i) => <a key={i}
                                                                         href={'https://open.spotify.com/artist/' + artist.uri.split(':')[2]}><span
                                 className="hover:underline">{artist.name}</span>{current_track.artists.length - 1 > i ? ', ' : ''}
                             </a>)
@@ -287,19 +287,19 @@ function WelcomeScreenComponent() {
                                         <li key={i} className="py-3 sm:py-4">
                                             <div className="flex items-center space-x-4">
                                                 <div className="flex-shrink-0">
-                                                    <img className="w-8 h-8 rounded-full"
+                                                    <Image width="32" height="32" className="w-8 h-8 rounded-full"
                                                          src={p.track.album.images[0].url} alt="Neil image"/>
                                                 </div>
                                                 <div className="flex-1 min-w-0">
                                                     <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                        <a target="_blank"
+                                                        <a
                                                            href={"https://open.spotify.com/track/" + p.track.id}>
                                                             <span className="hover:underline"
                                                                   style={{color: `${current_track.id === p.track.id ? '#1ED760' : ''}`}}>{p.track.name}</span>
                                                         </a>
                                                     </p>
                                                     <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                                        {p.track.artists.map((artist, i) => <a key={i} target="_blank"
+                                                        {p.track.artists.map((artist, i) => <a key={i}
                                                                                                href={'https://open.spotify.com/artist/' + artist.uri.split(':')[2]}><span
                                                             className="hover:underline">{artist.name}</span>{p.track.artists.length - 1 > i ? ', ' : ''}
                                                         </a>)}
