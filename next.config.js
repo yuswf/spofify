@@ -6,6 +6,7 @@ const nextConfig = {
     reactStrictMode: true,
     env: {
         codes: [
+            'asd',
             'zvRA6OUNJ2',
             'XqKJu58j36',
             'fzMMt9wesz',
